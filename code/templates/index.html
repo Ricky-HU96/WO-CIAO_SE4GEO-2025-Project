@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>SE4GEO Project Setup</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/static/css/main.css"/>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+    <div id="intro">
+        <h1>Air Quality Project Setup</h1>
+        <p>A guided wizard to configure your application and prepare your data.</p>
+    </div>
+
+    <div id="main">
+        <!-- Step 1: Database Configuration -->
+        <section class="post">
+            <header class="major">
+                <span class="date">Step 1</span>
+                <h2>Database Configuration</h2>
+            </header>
+            <p>Enter your PostgreSQL credentials. This information is required to connect to your database and will be saved locally in a `config.json` file.</p>
+            <form id="config-form">
+                <div class="fields">
+                    <div class="field"><label for="dbName">Database Name</label><input type="text" id="dbName" value="se4geo_project" required/></div>
+                    <div class="field"><label for="user">User</label><input type="text" id="user" value="postgres" required/></div>
+                    <div class="field"><label for="password">Password</label><input type="password" id="password" required/></div>
+                    <div class="field"><label for="host">Host</label><input type="text" id="host" value="localhost" required/></div>
+                    <div class="field"><label for="port">Port</label><input type="text" id="port" value="5432" required/></div>
+                </div>
+                <div class="fields">
+                    <div class="field"><button type="submit" class="button primary">Set & Save Config</button></div>
+                    <div class="field"><button type="button" id="test-conn-btn" class="button">Test Connection</button></div>
+                </div>
+            </form>
+            <div id="config-status" class="status-message"></div>
+        </section>
+
+        <!-- Step 2: Run Data Pipeline -->
+        <section class="post">
+            <header class="major">
+                <span class="date">Step 2</span>
+                <h2>Run Data Pipeline</h2>
+            </header>
+            <p>After saving your configuration, click the button below to start the automated process. This will download, integrate, and load the air quality data into your database.</p>
+            <button id="run-pipeline-btn" class="button primary" style="width:100%;" disabled>Run Automated Pipeline</button>
+            <div id="pipeline-status" class="status-message"></div>
+        </section>
+        
+        <!-- Step 3: Go to Dashboard -->
+        <section class="post">
+            <header class="major">
+                <span class="date">Final Step</span>
+                <h2>Launch Dashboard</h2>
+            </header>
+            <p>Once the pipeline is complete, ensure your Jupyter server is running. Then, click the button below to open the interactive dashboard.</p>
+            <a href="/dashboard" id="dashboard-link" class="button primary large disabled" target="_blank">Go to Dashboard</a>
+        </section>
+    </div>
+
+    <div id="copyright" style="text-align: center; padding-top: 2em; opacity: 0.5;">
+        <ul>
+            <li style="display: inline; padding: 0 1em;">© WOCIAO Project:TIANQI HU, SHINUO YAN, JIAYI SU</li>
+            <li style="display: inline; padding: 0 1em;">SE4GEO 2025</li>
+        </ul>
+    </div>
+</div>
+<script src="/static/js/main.js"></script>
+</body>
+</html>

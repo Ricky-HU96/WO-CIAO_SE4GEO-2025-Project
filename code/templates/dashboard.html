@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Air Quality Dashboard</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!-- 共享的 CSS 文件 -->
+    <link rel="stylesheet" href="/static/css/main.css"/>
+    <!-- 地图库 Leaflet 的 CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <style>
+        /* 为地图和图表添加一些特定样式 */
+        #map-container, #chart-container {
+            height: 500px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            margin-bottom: 2em;
+        }
+        #data-table-container {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 0.75em;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        th {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="is-preload">
+<div id="wrapper" class="fade-in">
+
+    <div id="intro">
+        <h1>Air Quality Dashboard</h1>
+        <p>Interactive visualization of air quality data in Lombardia.</p>
+    </div>
+
+    <div id="main">
+        <!-- 1. 控制和查询区域 -->
+        <section class="post">
+            <header class="major">
+                <h2>Query Data</h2>
+            </header>
+            <form id="query-form">
+                <div class="fields">
+                    <div class="field">
+                        <label for="pollutant-select">Select Pollutant</label>
+                        <select name="pollutant" id="pollutant-select" required>
+                            <option value="">-- Loading --</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="limit-input">Number of Records</label>
+                        <input type="number" name="limit" id="limit-input" value="100" min="1" max="5000" required>
+                    </div>
+                </div>
+                <button type="submit" class="button primary" style="width:100%;">Fetch & Visualize Data</button>
+            </form>
+            <div id="status-message" class="status-message"></div>
+        </section>
+
+        <!-- 2. 数据表格 -->
+        <section class="post" id="data-section" style="display:none;">
+            <header class="major">
+                <h2>Data Table</h2>
+            </header>
+            <div id="data-table-container">
+                <table id="data-table">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- 3. 地图 -->
+        <section class="post" id="map-section" style="display:none;">
+            <header class="major">
+                <h2>Geographic Distribution</h2>
+            </header>
+            <div id="map-container"></div>
+        </section>
+
+        <!-- 4. 图表 -->
+        <section class="post" id="chart-section" style="display:none;">
+            <header class="major">
+                <h2>Time Series Chart</h2>
+            </header>
+            <div id="chart-container"></div>
+        </section>
+    </div>
+
+    <div id="copyright" style="text-align: center; padding-top: 2em; opacity: 0.5;">
+         <ul>
+            <li style="display: inline; padding: 0 1em;">© WOCIAO Project</li>
+            <li style="display: inline; padding: 0 1em;">SE4GEO 2025</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- 引入 JS 库 -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>

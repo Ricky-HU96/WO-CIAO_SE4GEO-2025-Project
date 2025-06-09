@@ -1,0 +1,7 @@
+{
+    "dbName": "se4geo_project",
+    "user": "postgres",
+    "password": "qwe123456",
+    "host": "localhost",
+    "port": "5432"
+}
