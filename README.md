@@ -7,7 +7,7 @@ The project includes a backend data processing pipeline, a PostGIS database for 
 ---
 
 # ✨ Key Features
-- ** One-Click Data Pipeline: **
+- **One-Click Data Pipeline:**
   Triggered via a web interface, it automates the entire process of downloading, processing, and loading data into the database.
 - ** Geospatial Data Processing: **
   Uses GeoPandas to handle sensor location data and saves the results to a GeoPackage file.
