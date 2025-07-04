@@ -218,22 +218,23 @@ The application provides the following API endpoints for data querying:
 ]
 ```
 
-Data Analysis with Jupyter Notebook
-Make sure the Flask server is running.
-Start Jupyter Notebook from the project's root directory:
-Generated bash
+**Data Analysis with Jupyter Notebook**
+1. Make sure the Flask server is running.
+2. Start Jupyter Notebook from the project's root directory:
+   
+```
 jupyter notebook
-Use code with caution.
-Bash
-Open the dashboard.ipynb file.
-Execute the cells sequentially to see how to use the requests library to call the API and folium and plotly to create advanced maps and charts.
+```
+
+3. Open the dashboard.ipynb file.
+4. Execute the cells sequentially to see how to use the requests library to call the API and folium and plotly to create advanced maps and charts.
 
 ---
 
 # 💡 Future Improvements
-User Authentication: Add a login system to protect the configuration and pipeline execution pages.
-Advanced API Filtering: Add functionality to query data by date range or a geospatial bounding box (BBOX).
-Caching: Implement a caching mechanism for API responses to improve performance.
-Containerization: Use Docker and Docker Compose to simplify deployment.
-Unit/Integration Testing: Write test cases for the data pipeline and API endpoints.
-UI/UX Enhancements: Improve the dashboard's user experience and add more chart types.
+- User Authentication: Add a login system to protect the configuration and pipeline execution pages.
+- Advanced API Filtering: Add functionality to query data by date range or a geospatial bounding box (BBOX).
+- Caching: Implement a caching mechanism for API responses to improve performance.
+- Containerization: Use Docker and Docker Compose to simplify deployment.
+- Unit/Integration Testing: Write test cases for the data pipeline and API endpoints.
+- UI/UX Enhancements: Improve the dashboard's user experience and add more chart types.
