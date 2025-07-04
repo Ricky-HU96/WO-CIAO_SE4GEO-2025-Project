@@ -7,19 +7,19 @@ The project includes a backend data processing pipeline, a PostGIS database for 
 ---
 
 # ✨ Key Features
-- **One-Click Data Pipeline: **
+- ** One-Click Data Pipeline: **
   Triggered via a web interface, it automates the entire process of downloading, processing, and loading data into the database.
-- **Geospatial Data Processing: **
+- ** Geospatial Data Processing: **
   Uses GeoPandas to handle sensor location data and saves the results to a GeoPackage file.
-- **Robust Database Support: **
+- ** Robust Database Support: **
   Leverages PostgreSQL with the PostGIS extension for efficient storage and querying of geospatial data.
-- **Dynamic Configuration: **
+- ** Dynamic Configuration: **
   Loads database settings from config.json on startup and provides a web interface for dynamic updates.
-- **RESTful API: **
+- ** RESTful API: **
   Offers API endpoints that allow third-party applications or data analysis scripts (like Jupyter Notebooks) to easily access the processed data.
-- **Interactive Dashboard: **
+- ** nteractive Dashboard: **
   A front-end built with Flask, Leaflet.js, and Chart.js to display pollutant types and their geospatial distribution.
-- **Data-Analysis Friendly: **
+- ** Data-Analysis Friendly: **
   Includes dashboard.ipynb to demonstrate how to call the API for data retrieval and perform in-depth analysis and visualization with Folium and Plotly.
 
 ---
