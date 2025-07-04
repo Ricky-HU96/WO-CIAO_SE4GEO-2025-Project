@@ -47,7 +47,7 @@ The core workflow of the project is as follows:
 
 # 📂 Project Structure
 
-
+```
 ├── app.py                      # Flask main application, contains API and web page routes
 ├── combined_air_quality_measurements.py # Data integration script (ETL Step 1)
 ├── load_to_db.py               # Data loading script (ETL Step 2)
@@ -61,6 +61,7 @@ The core workflow of the project is as follows:
 ├── output_data/
 │   └── lombardia_air_quality.gpkg # Geospatial data file generated after the pipeline runs
 └── readme.md                   # This document
+```
 
 ---
 
@@ -81,21 +82,24 @@ cd <repository-directory>
 2. Create and Activate a Python Virtual Environment
 - Linux / macOS:
 
-```bash
+```
 python3 -m venv venv
 source venv/bin/activate
+```
 
 - Windows:
 
-```bash
+```
 python -m venv venv
 .\venv\Scripts\activate
+```
 
 3. Install Dependencies
 Project dependencies are listed in requirements.txt. Run the following command to install them:
 
-```bash
+```
 pip install flask flask_sqlalchemy sqlalchemy geoalchemy2 psycopg2-binary pandas geopandas shapely requests plotly folium
+```
 
 (Alternatively, if a requirements.txt file is provided, simply run pip install -r requirements.txt)
 
@@ -106,8 +110,9 @@ pip install flask flask_sqlalchemy sqlalchemy geoalchemy2 psycopg2-binary pandas
 - Connect to the newly created se4geo_project database and open a Query Tool.
 - Execute the following SQL command to enable the PostGIS extension:
 
-```bash
+```
 CREATE EXTENSION postgis;
+```
 
 You should see a "CREATE EXTENSION" success message if it works.
 
