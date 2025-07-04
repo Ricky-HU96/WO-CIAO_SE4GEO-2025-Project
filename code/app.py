@@ -13,7 +13,7 @@ from load_to_db import run_db_load
 # --- 1. 初始化扩展，但不绑定到特定的 app ---
 # 这允许我们在之后创建和配置 app 实例
 db = SQLAlchemy()
-CONFIG_FILE = 'config.json'
+CONFIG_FILE = os.path.join(os.path.dirname(__file__),'config.json')
 
 # --- 2. 创建数据库模型 (保持不变) ---
 class Measurement(db.Model):
