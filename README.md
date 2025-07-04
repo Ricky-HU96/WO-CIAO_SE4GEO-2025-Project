@@ -65,51 +65,45 @@ The core workflow of the project is as follows:
 ---
 
 # 🛠️ Prerequisites
-Before running this project, ensure you have the following software installed:
-Python 3.8+ and pip
-PostgreSQL 12+
-PostGIS 3+ extension (must be enabled for your PostgreSQL database)
-pgAdmin 4 (Recommended for database management)
+1. Before running this project, ensure you have the following software installed:
+2. Python 3.8+ and pip
+3. PostgreSQL 12+
+4. PostGIS 3+ extension (must be enabled for your PostgreSQL database)
+5. pgAdmin 4 (Recommended for database management)
 
 ---
 
 # ⚙️ Installation & Setup
 1. Clone the Repository
-Generated bash
 git clone <your-repository-url>
 cd <repository-directory>
-Use code with caution.
-Bash
+
 2. Create and Activate a Python Virtual Environment
-Linux / macOS:
-Generated bash
+- Linux / macOS:
 python3 -m venv venv
 source venv/bin/activate
-Use code with caution.
-Bash
-Windows:
-Generated bash
+
+- Windows:
+
 python -m venv venv
 .\venv\Scripts\activate
-Use code with caution.
-Bash
+
 3. Install Dependencies
 Project dependencies are listed in requirements.txt. Run the following command to install them:
-Generated bash
+
 pip install flask flask_sqlalchemy sqlalchemy geoalchemy2 psycopg2-binary pandas geopandas shapely requests plotly folium
-Use code with caution.
-Bash
+
 (Alternatively, if a requirements.txt file is provided, simply run pip install -r requirements.txt)
+
 4. Database Setup
-Open pgAdmin 4.
-In the left-hand server tree, right-click on "Databases" -> Create -> Database....
-Set the database name to se4geo_project and save.
-Connect to the newly created se4geo_project database and open a Query Tool.
-Execute the following SQL command to enable the PostGIS extension:
-Generated sql
+- Open pgAdmin 4.
+- In the left-hand server tree, right-click on "Databases" -> Create -> Database....
+- Set the database name to se4geo_project and save.
+- Connect to the newly created se4geo_project database and open a Query Tool.
+- Execute the following SQL command to enable the PostGIS extension:
+
 CREATE EXTENSION postgis;
-Use code with caution.
-SQL
+
 You should see a "CREATE EXTENSION" success message if it works.
 
 ---
