@@ -6,7 +6,7 @@ The project includes a backend data processing pipeline, a PostGIS database for 
 
 ---
 
-✨ Key Features
+# ✨ Key Features
 - **One-Click Data Pipeline: ** Triggered via a web interface, it automates the entire process of downloading, processing, and loading data into the database.
 - **Geospatial Data Processing: ** Uses GeoPandas to handle sensor location data and saves the results to a GeoPackage file.
 - **Robust Database Support: ** Leverages PostgreSQL with the PostGIS extension for efficient storage and querying of geospatial data.
@@ -14,7 +14,10 @@ The project includes a backend data processing pipeline, a PostGIS database for 
 - **RESTful API: ** Offers API endpoints that allow third-party applications or data analysis scripts (like Jupyter Notebooks) to easily access the processed data.
 - **Interactive Dashboard: ** A front-end built with Flask, Leaflet.js, and Chart.js to display pollutant types and their geospatial distribution.
 - **Data-Analysis Friendly: ** Includes dashboard.ipynb to demonstrate how to call the API for data retrieval and perform in-depth analysis and visualization with Folium and Plotly.
-🏛️ System Architecture
+
+---
+
+# 🏛️ System Architecture
 The core workflow of the project is as follows:
 Generated mermaid
 graph TD
@@ -42,6 +45,9 @@ graph TD
     end
 Use code with caution.
 Mermaid
+
+---
+
 📂 Project Structure
 Generated code
 .
@@ -65,6 +71,9 @@ Python 3.8+ and pip
 PostgreSQL 12+
 PostGIS 3+ extension (must be enabled for your PostgreSQL database)
 pgAdmin 4 (Recommended for database management)
+
+---
+
 ⚙️ Installation & Setup
 1. Clone the Repository
 Generated bash
@@ -103,6 +112,9 @@ CREATE EXTENSION postgis;
 Use code with caution.
 SQL
 You should see a "CREATE EXTENSION" success message if it works.
+
+---
+
 🚀 Running the Application (First Time)
 Step 1: Start the Flask Server
 In the project's root directory, run app.py:
@@ -126,6 +138,9 @@ This is a crucial step! To ensure the Flask application loads the database conne
 Go back to the terminal running app.py.
 Press Ctrl + C to stop the server.
 Run python app.py again to restart it.
+
+---
+
 📊 Usage
 Web Dashboard
 Navigate to http://127.0.0.1:5000/dashboard in your browser.
@@ -196,6 +211,9 @@ Use code with caution.
 Bash
 Open the dashboard.ipynb file.
 Execute the cells sequentially to see how to use the requests library to call the API and folium and plotly to create advanced maps and charts.
+
+---
+
 💡 Future Improvements
 User Authentication: Add a login system to protect the configuration and pipeline execution pages.
 Advanced API Filtering: Add functionality to query data by date range or a geospatial bounding box (BBOX).
