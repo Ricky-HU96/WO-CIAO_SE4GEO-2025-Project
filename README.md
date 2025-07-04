@@ -1,5 +1,5 @@
 # WO-CIAO_SE4GEO-2025-Project - Lombardy Air Quality Dashboard
-**Author:** TIANQI HU (ID: 10948367)  SHINUO YAN(ID: 11063707)  JIAYI SU(ID: 10962393)
+**Author:** TIANQI HU (ID: 10948367),  SHINUO YAN(ID: 11063707),  JIAYI SU(ID: 10962393)
 
 This is a full-stack web application project designed to provide a complete solution for fetching, processing, storing, and visualizing air quality monitoring data from the Lombardy region in Italy.
 The project includes a backend data processing pipeline, a PostGIS database for data storage, a Flask web server that provides a RESTful API, and an interactive web dashboard and Jupyter Notebook for data exploration and visualization.
