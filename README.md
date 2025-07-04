@@ -80,17 +80,21 @@ cd <repository-directory>
 
 2. Create and Activate a Python Virtual Environment
 - Linux / macOS:
+
+```bash
 python3 -m venv venv
 source venv/bin/activate
 
 - Windows:
 
+```bash
 python -m venv venv
 .\venv\Scripts\activate
 
 3. Install Dependencies
 Project dependencies are listed in requirements.txt. Run the following command to install them:
 
+```bash
 pip install flask flask_sqlalchemy sqlalchemy geoalchemy2 psycopg2-binary pandas geopandas shapely requests plotly folium
 
 (Alternatively, if a requirements.txt file is provided, simply run pip install -r requirements.txt)
@@ -102,6 +106,7 @@ pip install flask flask_sqlalchemy sqlalchemy geoalchemy2 psycopg2-binary pandas
 - Connect to the newly created se4geo_project database and open a Query Tool.
 - Execute the following SQL command to enable the PostGIS extension:
 
+```bash
 CREATE EXTENSION postgis;
 
 You should see a "CREATE EXTENSION" success message if it works.
