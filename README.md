@@ -9,17 +9,17 @@ The project includes a backend data processing pipeline, a PostGIS database for 
 # ✨ Key Features
 - **One-Click Data Pipeline:**
   Triggered via a web interface, it automates the entire process of downloading, processing, and loading data into the database.
-- ** Geospatial Data Processing: **
+- **Geospatial Data Processing:**
   Uses GeoPandas to handle sensor location data and saves the results to a GeoPackage file.
-- ** Robust Database Support: **
+- **Robust Database Support:**
   Leverages PostgreSQL with the PostGIS extension for efficient storage and querying of geospatial data.
-- ** Dynamic Configuration: **
+- **Dynamic Configuration:**
   Loads database settings from config.json on startup and provides a web interface for dynamic updates.
-- ** RESTful API: **
+- **RESTful API:**
   Offers API endpoints that allow third-party applications or data analysis scripts (like Jupyter Notebooks) to easily access the processed data.
-- ** nteractive Dashboard: **
+- **nteractive Dashboard:**
   A front-end built with Flask, Leaflet.js, and Chart.js to display pollutant types and their geospatial distribution.
-- ** Data-Analysis Friendly: **
+- **Data-Analysis Friendly:**
   Includes dashboard.ipynb to demonstrate how to call the API for data retrieval and perform in-depth analysis and visualization with Folium and Plotly.
 
 ---
@@ -126,46 +126,52 @@ You should see a "CREATE EXTENSION" success message if it works.
 ---
 
 # 🚀 Running the Application (First Time)
-Step 1: Start the Flask Server
+**Step 1: Start the Flask Server**
 In the project's root directory, run app.py:
-Generated bash
+
+```
 python app.py
-Use code with caution.
-Bash
+```
+
 The server will start on http://127.0.0.1:5000.
-Step 2: Configure the Database Connection
-Open a web browser and navigate to http://127.0.0.1:5000.
-You will see a configuration form. Fill in your PostgreSQL User, Password, Host, Port, and Database Name (se4geo_project).
-Click the "Test Connection" button. You should see a "Database connection successful!" message if your credentials are correct.
-Click the "Save Configuration" button. This will write your settings to the config.json file.
-Step 3: Run the Data Pipeline
-On the same page, click the "Run Data Pipeline" button.
-This will start the backend data processing flow. You can monitor the detailed progress in the terminal where you ran app.py (look for logs starting with "[PIPELINE]").
-This process may take several minutes as it downloads data, processes it, and loads it into the database.
-You will see a "Pipeline completed!" success message on the web page when the data has been successfully loaded.
-Step 4: Restart the Server
-This is a crucial step! To ensure the Flask application loads the database connection with the newly populated data, you must restart the server.
-Go back to the terminal running app.py.
-Press Ctrl + C to stop the server.
-Run python app.py again to restart it.
+
+**Step 2: Configure the Database Connection**
+1. Open a web browser and navigate to http://127.0.0.1:5000.
+2. You will see a configuration form. Fill in your PostgreSQL User, Password, Host, Port, and Database Name (se4geo_project).
+3. Click the "Test Connection" button. You should see a "Database connection successful!" message if your credentials are correct.
+4. Click the "Save Configuration" button. This will write your settings to the config.json file.
+
+**Step 3: Run the Data Pipeline**
+1. On the same page, click the "Run Data Pipeline" button.
+2. This will start the backend data processing flow. You can monitor the detailed progress in the terminal where you ran app.py (look for logs starting with "[PIPELINE]").
+3. This process may take several minutes as it downloads data, processes it, and loads it into the database.
+4. You will see a "Pipeline completed!" success message on the web page when the data has been successfully loaded.
+
+**Step 4: Restart the Server**
+**This is a crucial step!** To ensure the Flask application loads the database connection with the newly populated data, you must restart the server.
+1. Go back to the terminal running app.py.
+2. Press Ctrl + C to stop the server.
+3. Run python app.py again to restart it.
 
 ---
 
 # 📊 Usage
-Web Dashboard
-Navigate to http://127.0.0.1:5000/dashboard in your browser.
-The dashboard will feature:
-A dropdown menu listing all available pollutant types from the database.
-An interactive map showing the locations of monitoring stations for the selected pollutant.
-A time-series chart displaying pollutant concentration changes across different stations.
-API Endpoints
+**Web Dashboard**
+- Navigate to http://127.0.0.1:5000/dashboard in your browser.
+- The dashboard will feature:
+  - A dropdown menu listing all available pollutant types from the database.
+  - An interactive map showing the locations of monitoring stations for the selected pollutant.
+  - A time-series chart displaying pollutant concentration changes across different stations.
+
+**API Endpoints**
 The application provides the following API endpoints for data querying:
-Get All Pollutant Types
-Endpoint: /api/pollutants
-Method: GET
-Description: Returns a list of all unique pollutant names in the database.
-Example Response:
-Generated json
+
+- **Get All Pollutant Types**
+  - **Endpoint:** /api/pollutants
+  - **Method:** GET
+  - **Description:** Returns a list of all unique pollutant names in the database.
+  - **Example Response:**
+```
 [
   "Ammoniaca",
   "Arsenico",
@@ -174,18 +180,18 @@ Generated json
   "Biossido di Azoto",
   ...
 ]
-Use code with caution.
-Json
-Get Measurement Data
-Endpoint: /api/measurements
-Method: GET
-Parameters:
-pollutant (required): The name of the pollutant to query (e.g., Ozono).
-limit (optional, default 100): The maximum number of records to return.
-Description: Returns geospatial measurement data based on the pollutant type.
-Example Request: http://127.0.0.1:5000/api/measurements?pollutant=Ozono&limit=2
-Example Response:
-Generated json
+```
+
+- **Get Measurement Data**
+  - Endpoint: /api/measurements
+  - Method: GET
+  - Parameters:
+    - pollutant (required): The name of the pollutant to query (e.g., Ozono).
+    - limit (optional, default 100): The maximum number of records to return.
+  - Description: Returns geospatial measurement data based on the pollutant type.
+  - Example Request: http://127.0.0.1:5000/api/measurements?pollutant=Ozono&limit=2
+  - Example Response:
+```
 [
   {
     "location": {
@@ -210,8 +216,8 @@ Generated json
     "value": 47.9
   }
 ]
-Use code with caution.
-Json
+```
+
 Data Analysis with Jupyter Notebook
 Make sure the Flask server is running.
 Start Jupyter Notebook from the project's root directory:
