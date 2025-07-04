@@ -1,17 +1,19 @@
-# WO-CIAO_SE4GEO-2025-Project
-SE4GEO 2025 Project
-Lombardy Air Quality Dashboard
-![alt text](https://img.shields.io/badge/License-MIT-yellow.svg)
+# WO-CIAO_SE4GEO-2025-Project - Lombardy Air Quality Dashboard
+**Author:** TIANQI HU (ID: 10948367)  SHINUO YAN(ID: 11063707)  JIAYI SU(ID: 10962393)
+
 This is a full-stack web application project designed to provide a complete solution for fetching, processing, storing, and visualizing air quality monitoring data from the Lombardy region in Italy.
 The project includes a backend data processing pipeline, a PostGIS database for data storage, a Flask web server that provides a RESTful API, and an interactive web dashboard and Jupyter Notebook for data exploration and visualization.
+
+---
+
 ✨ Key Features
-One-Click Data Pipeline: Triggered via a web interface, it automates the entire process of downloading, processing, and loading data into the database.
-Geospatial Data Processing: Uses GeoPandas to handle sensor location data and saves the results to a GeoPackage file.
-Robust Database Support: Leverages PostgreSQL with the PostGIS extension for efficient storage and querying of geospatial data.
-Dynamic Configuration: Loads database settings from config.json on startup and provides a web interface for dynamic updates.
-RESTful API: Offers API endpoints that allow third-party applications or data analysis scripts (like Jupyter Notebooks) to easily access the processed data.
-Interactive Dashboard: A front-end built with Flask, Leaflet.js, and Chart.js to display pollutant types and their geospatial distribution.
-Data-Analysis Friendly: Includes dashboard.ipynb to demonstrate how to call the API for data retrieval and perform in-depth analysis and visualization with Folium and Plotly.
+- **One-Click Data Pipeline: ** Triggered via a web interface, it automates the entire process of downloading, processing, and loading data into the database.
+- **Geospatial Data Processing: ** Uses GeoPandas to handle sensor location data and saves the results to a GeoPackage file.
+- **Robust Database Support: ** Leverages PostgreSQL with the PostGIS extension for efficient storage and querying of geospatial data.
+- **Dynamic Configuration: ** Loads database settings from config.json on startup and provides a web interface for dynamic updates.
+- **RESTful API: ** Offers API endpoints that allow third-party applications or data analysis scripts (like Jupyter Notebooks) to easily access the processed data.
+- **Interactive Dashboard: ** A front-end built with Flask, Leaflet.js, and Chart.js to display pollutant types and their geospatial distribution.
+- **Data-Analysis Friendly: ** Includes dashboard.ipynb to demonstrate how to call the API for data retrieval and perform in-depth analysis and visualization with Folium and Plotly.
 🏛️ System Architecture
 The core workflow of the project is as follows:
 Generated mermaid
