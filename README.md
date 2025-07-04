@@ -47,7 +47,7 @@ The core workflow of the project is as follows:
 
 # 📂 Project Structure
 
-.
+
 ├── app.py                      # Flask main application, contains API and web page routes
 ├── combined_air_quality_measurements.py # Data integration script (ETL Step 1)
 ├── load_to_db.py               # Data loading script (ETL Step 2)
@@ -57,7 +57,7 @@ The core workflow of the project is as follows:
 │   ├── index.html              # Homepage for configuration and running the pipeline
 │   └── dashboard.html          # Data dashboard page
 ├── static/
-│   └── ...                     # (If needed) Static files like CSS, JavaScript, images
+│   └── ...                     # Static files like CSS, JavaScript, images
 ├── output_data/
 │   └── lombardia_air_quality.gpkg # Geospatial data file generated after the pipeline runs
 └── readme.md                   # This document
