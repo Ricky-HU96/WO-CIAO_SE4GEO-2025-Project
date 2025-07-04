@@ -46,7 +46,7 @@ The core workflow of the project is as follows:
 ---
 
 # 📂 Project Structure
-Generated code
+
 .
 ├── app.py                      # Flask main application, contains API and web page routes
 ├── combined_air_quality_measurements.py # Data integration script (ETL Step 1)
@@ -61,8 +61,10 @@ Generated code
 ├── output_data/
 │   └── lombardia_air_quality.gpkg # Geospatial data file generated after the pipeline runs
 └── readme.md                   # This document
-Use code with caution.
-🛠️ Prerequisites
+
+---
+
+# 🛠️ Prerequisites
 Before running this project, ensure you have the following software installed:
 Python 3.8+ and pip
 PostgreSQL 12+
