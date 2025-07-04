@@ -20,7 +20,6 @@ The project includes a backend data processing pipeline, a PostGIS database for 
 # 🏛️ System Architecture
 The core workflow of the project is as follows:
 
-graph TD
     subgraph "1. Data Pipeline (Triggered via Web UI)"
         A[Fetch Sensor Metadata CSV] --> C{Data Integration & Processing<br/>(combined_air_quality_measurements.py)};
         B[Fetch Air Quality Measurements CSV] --> C;
@@ -43,8 +42,6 @@ graph TD
         L --> M[Save Configuration<br/>(config.json)];
         M --> G;
     end
-Use code with caution.
-Mermaid
 
 ---
 
