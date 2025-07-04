@@ -19,7 +19,7 @@ The project includes a backend data processing pipeline, a PostGIS database for 
 
 # 🏛️ System Architecture
 The core workflow of the project is as follows:
-Generated mermaid
+
 graph TD
     subgraph "1. Data Pipeline (Triggered via Web UI)"
         A[Fetch Sensor Metadata CSV] --> C{Data Integration & Processing<br/>(combined_air_quality_measurements.py)};
@@ -48,7 +48,7 @@ Mermaid
 
 ---
 
-📂 Project Structure
+# 📂 Project Structure
 Generated code
 .
 ├── app.py                      # Flask main application, contains API and web page routes
@@ -74,7 +74,7 @@ pgAdmin 4 (Recommended for database management)
 
 ---
 
-⚙️ Installation & Setup
+# ⚙️ Installation & Setup
 1. Clone the Repository
 Generated bash
 git clone <your-repository-url>
@@ -115,7 +115,7 @@ You should see a "CREATE EXTENSION" success message if it works.
 
 ---
 
-🚀 Running the Application (First Time)
+# 🚀 Running the Application (First Time)
 Step 1: Start the Flask Server
 In the project's root directory, run app.py:
 Generated bash
@@ -141,7 +141,7 @@ Run python app.py again to restart it.
 
 ---
 
-📊 Usage
+# 📊 Usage
 Web Dashboard
 Navigate to http://127.0.0.1:5000/dashboard in your browser.
 The dashboard will feature:
@@ -214,7 +214,7 @@ Execute the cells sequentially to see how to use the requests library to call th
 
 ---
 
-💡 Future Improvements
+# 💡 Future Improvements
 User Authentication: Add a login system to protect the configuration and pipeline execution pages.
 Advanced API Filtering: Add functionality to query data by date range or a geospatial bounding box (BBOX).
 Caching: Implement a caching mechanism for API responses to improve performance.
