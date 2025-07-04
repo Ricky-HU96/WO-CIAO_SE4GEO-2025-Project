@@ -73,11 +73,11 @@ The core workflow of the project is as follows:
 ---
 
 # 🛠️ Prerequisites
-1. Before running this project, ensure you have the following software installed:
-2. Python 3.8+ and pip
-3. PostgreSQL 12+
-4. PostGIS 3+ extension (must be enabled for your PostgreSQL database)
-5. pgAdmin 4 (Recommended for database management)
+Before running this project, ensure you have the following software installed:
+1. Python 3.8+ and pip
+2. PostgreSQL 12+
+3. PostGIS 3+ extension (must be enabled for your PostgreSQL database)
+4. pgAdmin 4 (Recommended for database management)
 
 ---
 
